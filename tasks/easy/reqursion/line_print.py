@@ -20,3 +20,16 @@ line_print(some_list)
     3
 8
 """
+
+
+def line_print(x: list, n=0):
+    for a in x:
+        if isinstance(a, list):
+            line_print(a, n + 1)
+        else:
+            t = '\t' * n
+            print(f"{t}{a}")
+
+
+if __name__ == '__main__':
+    line_print([1, 2, [1, 2, [5, 7], 3], 8])

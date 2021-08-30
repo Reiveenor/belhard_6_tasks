@@ -12,3 +12,20 @@ next(fibonacci_gen) -> 3
 next(fibonacci_gen) -> 5
 next(fibonacci_gen) -> 8
 """
+
+
+def fibonacci():
+    first = 1
+    second = 1
+    while True:
+        yield first
+        print(first)
+        first, second = second, first + second
+
+
+if __name__ == '__main__':
+    fibonacci_gen = fibonacci()
+    print(next(fibonacci_gen))
+    print(next(fibonacci_gen))
+    print(next(fibonacci_gen))
+    print(next(fibonacci_gen))

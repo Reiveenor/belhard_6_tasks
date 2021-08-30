@@ -11,4 +11,18 @@
     ...
 }
 """
-STR_VAL = 'python is the fastest-growing major programming language'
+
+
+def dict_from_str(arg1: str):
+    arg1 = list(arg1)
+    print(arg1)
+    result_dict = {}
+    for item in arg1:
+        index = arg1.index(item)
+        print(index)
+    return result_dict
+
+
+if __name__ == '__main__':
+    STR_VAL = 'python is the fastest-growing major programming language'
+    print(dict_from_str(STR_VAL))

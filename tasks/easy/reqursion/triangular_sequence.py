@@ -24,3 +24,13 @@ n = 6:
 55555
 666666
 """
+
+
+def triangular_sequence(arg1: int, x=1):
+    if arg1 >= x:
+        print(str(x) * x)
+        return triangular_sequence(arg1, x + 1)
+
+
+if __name__ == '__main__':
+    triangular_sequence(int(input("Input some number: ")))

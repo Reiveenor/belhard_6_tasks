@@ -19,3 +19,20 @@ next(tn_gen) -> 10
 next(tn_gen) -> 15
 next(tn_gen) -> 21
 """
+
+
+def triangular_numbers():
+    tn = 2
+    cur = 1
+    while True:
+        yield cur
+        cur = cur + tn
+        tn += 1
+
+
+if __name__ == '__main__':
+    tn_gen = triangular_numbers()
+    print(next(tn_gen))
+    print(next(tn_gen))
+    print(next(tn_gen))
+    print(next(tn_gen))

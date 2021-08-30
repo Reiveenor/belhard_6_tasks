@@ -4,3 +4,12 @@
 значением. Предполагается, что элементы списка будут соответствовать
 правилам задания ключей в словарях.
 """
+
+
+def to_dict(list1: list):
+    new_dict = zip(list1, list1)
+    return dict(new_dict)
+
+
+if __name__ == '__main__':
+    print(to_dict([1, 2, 3, 4, 5, 6]))
