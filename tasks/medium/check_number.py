@@ -6,12 +6,13 @@
 """
 
 
-def check_number(arg1: int):
-    if arg1 & (arg1 - 1) == 0:
-        return print(True)
+def check_number(n: int):
+    if n % 2 != 0:
+        print(f"{n} is not degree 2, so it is False")
+        return check_number(n // 2)
     else:
-        return print(False)
+        return print(f"{n} is degree 2, so it is True")
 
 
 if __name__ == '__main__':
-    check_number(16)
+    check_number(1)

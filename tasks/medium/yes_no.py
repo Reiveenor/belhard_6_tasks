@@ -5,12 +5,13 @@
 
 
 def yes_or_no(list1: list):
-    for i in range(len(list1) - 1):
-        x = list1.count(list1[i])
-        i += 1
-        if x == 2:
+    some_set = set()
+
+    for i in list1:
+        if i in some_set:
             print("Yes")
         else:
+            some_set.add(i)
             print("No")
 
 

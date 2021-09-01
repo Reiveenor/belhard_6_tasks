@@ -19,7 +19,6 @@ def fibonacci():
     second = 1
     while True:
         yield first
-        print(first)
         first, second = second, first + second
 
 

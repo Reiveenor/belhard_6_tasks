@@ -13,4 +13,4 @@ def fibonacci(n: int):
 
 
 if __name__ == '__main__':
-    print(fibonacci(7))
+    print(fibonacci(int(input("Input some number: "))))

@@ -21,16 +21,17 @@ StopIteration
 
 
 def fibonacci(n: int):
-    fib1 = fib2 = 1
-    print(fib1)
-    print(fib2)
-    for i in range(2, n):
-        fib1, fib2 = fib2, fib1 + fib2
-        print(fib2)
-
-
-# raise StopIteration
+    if n <= 1:
+        raise ValueError("Введите значение больше 1")
+    current = 1
+    second = 2
+    while current <= n:
+        yield current
+        current, second = second, current + second
+        current += 1
 
 
 if __name__ == '__main__':
-    fibonacci(10)
+    fib = fibonacci
+    for i in fib(5):
+        print(i)

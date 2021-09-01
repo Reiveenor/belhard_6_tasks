@@ -13,14 +13,13 @@
 """
 
 
-def dict_from_str(arg1: str):
-    arg1 = list(arg1)
-    print(arg1)
-    result_dict = {}
+def dict_from_str(list1: str):
+    arg1 = list(list1)
+    some_list = []
     for item in arg1:
-        index = arg1.index(item)
-        print(index)
-    return result_dict
+        some_list.append(list1.count(item))
+    result_dict = zip(list1, some_list)
+    return dict(result_dict)
 
 
 if __name__ == '__main__':

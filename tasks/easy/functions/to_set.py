@@ -4,9 +4,8 @@
 """
 
 
-def to_set(arg1: list):
-    print(set(arg1))
-    print(len(set(arg1)))
+def to_set(some_list: list):
+    return print(set(some_list)), print(len(set(some_list)))
 
 
 if __name__ == '__main__':

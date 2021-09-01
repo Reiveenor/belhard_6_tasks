@@ -35,8 +35,8 @@ def remove_class(arg1: dict, arg2):
     del arg1[arg2]
 
 
-def calc_students(arg1: dict):
-    return print(sum(arg1.values()))
+def calc_students(class_list: dict):
+    return print(sum(class_list.values()))
 
 
 if __name__ == '__main__':
