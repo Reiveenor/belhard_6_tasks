@@ -14,9 +14,43 @@
 - Функция calc_students, которая принимает SCHOOL_DATA и возвращает кол-во
     учеников во всей школе
 """
-school_data = {
-    '1a': 15,
-    '1b': 23,
-    '2a': 13,
-    '2b': 30
-}
+
+
+def incr_students(arg1: dict, arg2):
+    arg1[arg2] = arg1.get(arg2) + 1
+
+
+def decr_students(arg1: dict, arg2):
+    if arg1.get(arg2) > 0:
+        arg1[arg2] = arg1.get(arg2) - 1
+    else:
+        print("Количество учеников в классе должно быть больше 0")
+
+
+def add_class(arg1: dict, arg2):
+    arg1.update({arg2: 0})
+
+
+def remove_class(arg1: dict, arg2):
+    del arg1[arg2]
+
+
+def calc_students(class_list: dict):
+    return print(sum(class_list.values()))
+
+
+if __name__ == '__main__':
+    school_data = {
+        '1a': 15,
+        '1b': 23,
+        '2a': 13,
+        '2b': 30
+    }
+
+    print(school_data)
+    incr_students(school_data, '1a')
+    decr_students(school_data, '1b')
+    add_class(school_data, '3a')
+    remove_class(school_data, '2a')
+    calc_students(school_data)
+    print(school_data)

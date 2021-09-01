@@ -10,3 +10,20 @@ next(factorial_gen) -> 2
 next(factorial_gen) -> 6
 next(factorial_gen) -> 24
 """
+
+
+def factorial():
+    x = 1
+    y = 2
+    while True:
+        yield x
+        x = x * y
+        y += 1
+
+
+if __name__ == '__main__':
+    factorial_gen = factorial()
+    print(next(factorial_gen))
+    print(next(factorial_gen))
+    print(next(factorial_gen))
+    print(next(factorial_gen))
